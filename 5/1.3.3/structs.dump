@@ -1,0 +1,114 @@
+
+// classID{0}: Object
+// Object is abstract
+
+// classID{3}: LevelGameManager <- GameManager <- Object
+// LevelGameManager is abstract
+// GameManager is abstract
+// Object is abstract
+
+// classID{5}: TimeManager <- GlobalGameManager <- GameManager <- Object
+TimeManager Base // ByteSize{10}, Index{0}, Version{1}, IsArray{0}, MetaFlag{0}
+	float Fixed Timestep // ByteSize{4}, Index{1}, Version{1}, IsArray{0}, MetaFlag{0}
+	float Maximum Allowed Timestep // ByteSize{4}, Index{2}, Version{1}, IsArray{0}, MetaFlag{0}
+	float m_TimeScale // ByteSize{4}, Index{3}, Version{1}, IsArray{0}, MetaFlag{0}
+	float Maximum Particle Timestep // ByteSize{4}, Index{4}, Version{1}, IsArray{0}, MetaFlag{0}
+
+// classID{6}: GlobalGameManager <- GameManager <- Object
+// GlobalGameManager is abstract
+// GameManager is abstract
+// Object is abstract
+
+// classID{9}: GameManager <- Object
+// GameManager is abstract
+// Object is abstract
+
+// classID{11}: AudioManager <- GlobalGameManager <- GameManager <- Object
+AudioManager Base // ByteSize{ffffffff}, Index{0}, Version{2}, IsArray{0}, MetaFlag{8000}
+	float m_Volume // ByteSize{4}, Index{1}, Version{1}, IsArray{0}, MetaFlag{0}
+	float Rolloff Scale // ByteSize{4}, Index{2}, Version{1}, IsArray{0}, MetaFlag{0}
+	float Doppler Factor // ByteSize{4}, Index{3}, Version{1}, IsArray{0}, MetaFlag{0}
+	int Default Speaker Mode // ByteSize{4}, Index{4}, Version{1}, IsArray{0}, MetaFlag{0}
+	int m_SampleRate // ByteSize{4}, Index{5}, Version{1}, IsArray{0}, MetaFlag{0}
+	int m_DSPBufferSize // ByteSize{4}, Index{6}, Version{1}, IsArray{0}, MetaFlag{0}
+	int m_VirtualVoiceCount // ByteSize{4}, Index{7}, Version{1}, IsArray{0}, MetaFlag{0}
+	int m_RealVoiceCount // ByteSize{4}, Index{8}, Version{1}, IsArray{0}, MetaFlag{0}
+	string m_SpatializerPlugin // ByteSize{ffffffff}, Index{9}, Version{1}, IsArray{0}, MetaFlag{8000}
+		Array Array // ByteSize{ffffffff}, Index{a}, Version{1}, IsArray{1}, MetaFlag{4001}
+			int size // ByteSize{4}, Index{b}, Version{1}, IsArray{0}, MetaFlag{1}
+			char data // ByteSize{1}, Index{c}, Version{1}, IsArray{0}, MetaFlag{1}
+	string m_AmbisonicDecoderPlugin // ByteSize{ffffffff}, Index{d}, Version{1}, IsArray{0}, MetaFlag{8000}
+		Array Array // ByteSize{ffffffff}, Index{e}, Version{1}, IsArray{1}, MetaFlag{4001}
+			int size // ByteSize{4}, Index{f}, Version{1}, IsArray{0}, MetaFlag{1}
+			char data // ByteSize{1}, Index{10}, Version{1}, IsArray{0}, MetaFlag{1}
+	bool m_DisableAudio // ByteSize{1}, Index{11}, Version{1}, IsArray{0}, MetaFlag{0}
+	bool m_VirtualizeEffects // ByteSize{1}, Index{12}, Version{1}, IsArray{0}, MetaFlag{4000}
+	int m_RequestedDSPBufferSize // ByteSize{4}, Index{13}, Version{1}, IsArray{0}, MetaFlag{0}
+
+// classID{13}: InputManager <- GlobalGameManager <- GameManager <- Object
+InputManager Base // ByteSize{ffffffff}, Index{0}, Version{2}, IsArray{0}, MetaFlag{8000}
+	vector m_Axes // ByteSize{ffffffff}, Index{1}, Version{1}, IsArray{0}, MetaFlag{8000}
+		Array Array // ByteSize{ffffffff}, Index{2}, Version{1}, IsArray{1}, MetaFlag{c000}
+			int size // ByteSize{4}, Index{3}, Version{1}, IsArray{0}, MetaFlag{0}
+			InputAxis data // ByteSize{ffffffff}, Index{4}, Version{3}, IsArray{0}, MetaFlag{8000}
+				string m_Name // ByteSize{ffffffff}, Index{5}, Version{1}, IsArray{0}, MetaFlag{8000}
+					Array Array // ByteSize{ffffffff}, Index{6}, Version{1}, IsArray{1}, MetaFlag{4001}
+						int size // ByteSize{4}, Index{7}, Version{1}, IsArray{0}, MetaFlag{1}
+						char data // ByteSize{1}, Index{8}, Version{1}, IsArray{0}, MetaFlag{1}
+				string descriptiveName // ByteSize{ffffffff}, Index{9}, Version{1}, IsArray{0}, MetaFlag{8000}
+					Array Array // ByteSize{ffffffff}, Index{a}, Version{1}, IsArray{1}, MetaFlag{4001}
+						int size // ByteSize{4}, Index{b}, Version{1}, IsArray{0}, MetaFlag{1}
+						char data // ByteSize{1}, Index{c}, Version{1}, IsArray{0}, MetaFlag{1}
+				string descriptiveNegativeName // ByteSize{ffffffff}, Index{d}, Version{1}, IsArray{0}, MetaFlag{8000}
+					Array Array // ByteSize{ffffffff}, Index{e}, Version{1}, IsArray{1}, MetaFlag{4001}
+						int size // ByteSize{4}, Index{f}, Version{1}, IsArray{0}, MetaFlag{1}
+						char data // ByteSize{1}, Index{10}, Version{1}, IsArray{0}, MetaFlag{1}
+				string negativeButton // ByteSize{ffffffff}, Index{11}, Version{1}, IsArray{0}, MetaFlag{8000}
+					Array Array // ByteSize{ffffffff}, Index{12}, Version{1}, IsArray{1}, MetaFlag{4001}
+						int size // ByteSize{4}, Index{13}, Version{1}, IsArray{0}, MetaFlag{1}
+						char data // ByteSize{1}, Index{14}, Version{1}, IsArray{0}, MetaFlag{1}
+				string positiveButton // ByteSize{ffffffff}, Index{15}, Version{1}, IsArray{0}, MetaFlag{8000}
+					Array Array // ByteSize{ffffffff}, Index{16}, Version{1}, IsArray{1}, MetaFlag{4001}
+						int size // ByteSize{4}, Index{17}, Version{1}, IsArray{0}, MetaFlag{1}
+						char data // ByteSize{1}, Index{18}, Version{1}, IsArray{0}, MetaFlag{1}
+				string altNegativeButton // ByteSize{ffffffff}, Index{19}, Version{1}, IsArray{0}, MetaFlag{8000}
+					Array Array // ByteSize{ffffffff}, Index{1a}, Version{1}, IsArray{1}, MetaFlag{4001}
+						int size // ByteSize{4}, Index{1b}, Version{1}, IsArray{0}, MetaFlag{1}
+						char data // ByteSize{1}, Index{1c}, Version{1}, IsArray{0}, MetaFlag{1}
+				string altPositiveButton // ByteSize{ffffffff}, Index{1d}, Version{1}, IsArray{0}, MetaFlag{8000}
+					Array Array // ByteSize{ffffffff}, Index{1e}, Version{1}, IsArray{1}, MetaFlag{4001}
+						int size // ByteSize{4}, Index{1f}, Version{1}, IsArray{0}, MetaFlag{1}
+						char data // ByteSize{1}, Index{20}, Version{1}, IsArray{0}, MetaFlag{1}
+				float gravity // ByteSize{4}, Index{21}, Version{1}, IsArray{0}, MetaFlag{0}
+				float dead // ByteSize{4}, Index{22}, Version{1}, IsArray{0}, MetaFlag{0}
+				float sensitivity // ByteSize{4}, Index{23}, Version{1}, IsArray{0}, MetaFlag{0}
+				bool snap // ByteSize{1}, Index{24}, Version{1}, IsArray{0}, MetaFlag{0}
+				bool invert // ByteSize{1}, Index{25}, Version{1}, IsArray{0}, MetaFlag{4000}
+				int type // ByteSize{4}, Index{26}, Version{1}, IsArray{0}, MetaFlag{0}
+				int axis // ByteSize{4}, Index{27}, Version{1}, IsArray{0}, MetaFlag{0}
+				int joyNum // ByteSize{4}, Index{28}, Version{1}, IsArray{0}, MetaFlag{0}
+	bool m_UsePhysicalKeys // ByteSize{1}, Index{29}, Version{1}, IsArray{0}, MetaFlag{4000}
+
+// classID{18}: EditorExtension <- Object
+// EditorExtension is abstract
+// Object is abstract
+
+// classID{19}: Physics2DSettings <- GlobalGameManager <- GameManager <- Object
+Physics2DSettings Base // ByteSize{ffffffff}, Index{0}, Version{5}, IsArray{0}, MetaFlag{8000}
+	Vector2f m_Gravity // ByteSize{8}, Index{1}, Version{1}, IsArray{0}, MetaFlag{200000}
+		float x // ByteSize{4}, Index{2}, Version{1}, IsArray{0}, MetaFlag{200000}
+		float y // ByteSize{4}, Index{3}, Version{1}, IsArray{0}, MetaFlag{200000}
+	PPtr<PhysicsMaterial2D> m_DefaultMaterial // ByteSize{c}, Index{4}, Version{1}, IsArray{0}, MetaFlag{0}
+		int m_FileID // ByteSize{4}, Index{5}, Version{1}, IsArray{0}, MetaFlag{800001}
+		SInt64 m_PathID // ByteSize{8}, Index{6}, Version{1}, IsArray{0}, MetaFlag{800001}
+	int m_VelocityIterations // ByteSize{4}, Index{7}, Version{1}, IsArray{0}, MetaFlag{0}
+	int m_PositionIterations // ByteSize{4}, Index{8}, Version{1}, IsArray{0}, MetaFlag{0}
+	float m_VelocityThreshold // ByteSize{4}, Index{9}, Version{1}, IsArray{0}, MetaFlag{0}
+	float m_MaxLinearCorrection // ByteSize{4}, Index{a}, Version{1}, IsArray{0}, MetaFlag{0}
+	float m_MaxAngularCorrection // ByteSize{4}, Index{b}, Version{1}, IsArray{0}, MetaFlag{0}
+	float m_MaxTranslationSpeed // ByteSize{4}, Index{c}, Version{1}, IsArray{0}, MetaFlag{0}
+	float m_MaxRotationSpeed // ByteSize{4}, Index{d}, Version{1}, IsArray{0}, MetaFlag{0}
+	float m_BaumgarteScale // ByteSize{4}, Index{e}, Version{1}, IsArray{0}, MetaFlag{0}
+	float m_BaumgarteTimeOfImpactScale // ByteSize{4}, Index{f}, Version{1}, IsArray{0}, MetaFlag{0}
+	float m_TimeToSleep // ByteSize{4}, Index{10}, Version{1}, IsArray{0}, MetaFlag{0}
+	float m_LinearSleepTolerance // ByteSize{4}, Index{11}, Version{
